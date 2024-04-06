@@ -1,0 +1,18 @@
+.title{
+    background-color:dimgray;
+    width: 100%;
+    padding: 0px;
+    margin-top: 0px;
+    height: 45px;
+    font-family: 'Trebuchet MS';
+    font-weight: bolder; font-size: 27px;
+}
+.search{
+margin-left: 150px;
+width: 220px;
+}
+#icons{
+    float: right;
+    font-size: larger;
+    vertical-align: bottom;
+}
