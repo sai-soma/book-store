@@ -47,13 +47,12 @@ export default function Navbar() {
           <div key={book.id} className="book-card">
             {book.volumeInfo.imageLinks && (
               <img src={book.volumeInfo.imageLinks.thumbnail} alt={book.volumeInfo.title} />
-            )}
-            <h2>{book.volumeInfo.title}</h2>
-            <p>{book.volumeInfo.authors?.join(', ')}</p>
+            )}           
             <div className="buttons">
+              <h3>{book.volumeInfo.title}</h3>
               <a href={book.volumeInfo.previewLink} target="_blank" rel="noopener noreferrer">
                 Read Now
-              </a>
+              </a>&nbsp;
               <a href={book.volumeInfo.infoLink} target="_blank" rel="noopener noreferrer">
                 More Info
               </a>
