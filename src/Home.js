@@ -31,8 +31,19 @@ export default function Home() {
         <div className="Book-container">
           {
             books && books.map(elem=>(
-              <div key={elem.id} className={`book-item ${selectedBookId === elem.id ? 'clicked' : ''}`}>
-              <img src={elem.volumeInfo.imageLinks.thumbnail} alt='book-thumbnail' onClick={()=>handleClick(elem)}/>
+            <div key={elem.id} className={`book-item ${selectedBookId === elem.id ? 'clicked' : ''}`}>
+                {elem.volumeInfo.imageLinks && (
+                  <img src={elem.volumeInfo.imageLinks.thumbnail} alt='book-thumbnail' onClick={()=>handleClick(elem)}/>
+                )}
+                <div className="buttons">
+              <h3>{elem.volumeInfo.title}</h3>
+              <a href={elem.volumeInfo.previewLink} target="_blank" rel="noopener noreferrer">
+                Read Now
+              </a>&nbsp;
+              <a href={elem.volumeInfo.infoLink} target="_blank" rel="noopener noreferrer">
+                More Info
+              </a>
+            </div>
               <div id='desc'></div>
             </div>
             ))
